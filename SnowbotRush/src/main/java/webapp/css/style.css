@@ -1,0 +1,48 @@
+body, html, table {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.startBackground {
+    background-image: url("./../assets/startScreenBackground.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*centering the PlayGame and GameRules buttons to be aligned on any screen size*/
+.centerPlayGame{
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 39%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.centerGameRules{
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 61%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#homeBtn {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px 40px;
+}
+
+.gameTitle {
+    width: 90%;
+    border: 0;
+    font-family: "Arial Black";
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 10px;
+}

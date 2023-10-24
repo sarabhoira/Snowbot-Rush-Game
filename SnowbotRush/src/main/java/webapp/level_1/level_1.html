@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> GameTable </title>
+    <link rel="stylesheet" href="css/level_1.css">
+</head>
+<body style = "background-color:lightcyan ">
+    <!-- This is the layout for the game !-->
+    <table>
+        <tr>
+            <td style="width: 100%; height: 5%; border: 0;">
+                <table style="width: 100%; height: 100%; background-color: #6AE1FF">
+                    <tr>
+                        <td style="width: 10%; border: 0;"><a href="./../index.html" class="button"><button id="homeBtn" type="button">HOME</button></a></td>
+                        <td colspan="2" class="gameTitle">WELCOME TO SNOWBOT RUSH!</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100%; height: 20%; border: 0;">
+                <table style="width: 100%; height: 100%">
+                    <tr>
+                        <td style="width: 25%; padding-left: 7px;">
+                            <table style="border: 0; height: 60%;">
+                                <tr><td class="playerInput"><b>Player Input</b></td></tr>
+                                <tr>
+                                    <td class="playerInput">
+                                        <label for="name">Enter Name:</label>
+                                        <div class="col-19" style="display: inline-block;">
+                                            <input class="textbox-19" type="text" id="name" name="name" placeholder="Name">
+                                            <span class="focus-border-19"><i></i></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="playerInput">
+                                        <label for="level">Select Difficulty:</label>
+                                        <select class="selection" name="level" id="level">
+                                            <option value="EASY">Easy</option>
+                                            <option value="MEDIUM">Medium</option>
+                                            <option value="HARD">Hard</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr><td class="playerInput"><button id="startBtn" type="button" onclick="startGame()">Start Game</button></td></tr>
+                            </table>
+                        </td>
+                        <td style="width: 25%">
+                            <table>
+                                <tr>
+                                    <td style="border: 0;">
+                                        <img class="center" src="assets/snowbot.png" id="snowbot" style="width: 75px; height: 105px">
+                                    </td>
+                                    <td style="border: 0;">
+                                        <table style="border: 0; height: 30%;">
+                                            <tr>
+                                                <td class="playerInput">
+                                                    <b>Player Points</b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="playerInput">
+                                                    <label for="points">Score:</label>
+                                                    <input class="playerScore" type="text" id="points" name="points" size="5" readonly>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="playerInput">
+                                                    <label for="lives">Lives:</label>
+                                                    <input class="playerScore" type="text" id="lives" name="lives" size="5" readonly>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 25%; padding-left: 12px;">
+                            <b>Game Messages</b> <br>
+                            <textarea id="messages" name="messages" readonly>Welcome To Snowbot Rush!</textarea>
+                        </td>
+                        <td style="width: 25%">
+                            <b>High Score</b>
+                            <table id="highScores">
+                                <thead class="highScoreTitle"><td>Rank</td><td>Name</td><td>Score</td></thead>
+                                <tbody class="highScoreTable"><tr><td></td><td></td><td></td></tr></tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100%; height: 85%; border: 0;">
+                <table style="width: 100%; height: 100%;">
+                    <tr>
+                        <td style="width: 75%">
+                            <div id="gameBoard">
+                                <div class="center-body">
+                                <div class="loader-circle-9">Waiting
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width: 25%">
+                            <table>
+                                <tr>
+                                    <td style="border: 0; vertical-align: top;">
+                                        <b>Chat With Other Players!</b>
+                                        <div style="height: 80%;">
+                                            <textarea id="log" name="log" rows="23" readonly>Welcome To Snowbot Rush Chat!</textarea><br>
+                                            <input title="Chat Input" id="chat" type="text" placeholder="type a message" autofocus/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="js/level_1.js"></script>
+    <script src="js/highscore.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+.table, td, th {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+html, body, table {
+    padding: 0px;
+    width:100%;
+    height:100%;
+    margin:0px;
+    table-layout: fixed;
+}
+/* Centered text */
+.centered {
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+textarea {
+    resize: none;
+    padding: 5px;
+}
+
+#messages {
+    width: 95%;
+    height: 70%;
+    border-color: #6AE1FF;
+}
+
+#log {
+    width: 95%;
+    border-color: #6AE1FF;
+}
+
+#chat {
+    width: 95%;
+    border-color: #6AE1FF;
+}
+
+/* style for cursor */
+#gameBoard {
+    cursor: url('../assets/cursor.png'), auto;
+}
+
+/* style for waiting symbol starts...*/
+.center-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-circle-9 {
+    /*position: absolute;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border: 3px solid #3c3c3c;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #00eaff;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+.loader-circle-9:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid #00eaff;
+    border-right: 3px solid #00eaff;
+    border-radius: 50%;
+    animation: animateC 2s linear infinite;
+}
+.loader-circle-9 span {
+    display: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 2s linear infinite;
+}
+.loader-circle-9 span:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #00eaff;
+    top: -6px;
+    right: -8px;
+    box-shadow: 0 0 20px #00eaff;
+}
+@keyframes animateC {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+} /* ...style for waiting symbol ends */
+
+/* style for input text box of name starts...*/
+.col-19 {
+    display: inline-block;
+    position: relative;
+}
+.textbox-19 {
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #333;
+    width: 120px;
+    height: 18px;
+    letter-spacing: 1px;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+    outline: none;
+}
+.textbox-19 ~ .focus-border-19:before,
+.textbox-19 ~ .focus-border-19:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6AE1FF;
+    transition: 0.2s;
+    transition-delay: 0.2s;
+}
+.textbox-19 ~ .focus-border-19:after {
+    top: auto;
+    bottom: 0;
+    right: auto;
+    left: 0;
+    transition-delay: 0.6s;
+}
+.textbox-19 ~ .focus-border-19 i:before,
+.textbox-19 ~ .focus-border-19 i:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: #6AE1FF;
+    transition: 0.2s;
+}
+.textbox-19 ~ .focus-border-19 i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    transition-delay: 0.4s;
+}
+.textbox-19:focus ~ .focus-border-19:before,
+.textbox-19:focus ~ .focus-border-19:after {
+    width: 100%;
+    transition: 0.2s;
+    transition-delay: 0.6s;
+}
+.textbox-19:focus ~ .focus-border-19:after {
+    transition-delay: 0.2s;
+}
+.textbox-19:focus ~ .focus-border-19 i:before,
+.textbox-19:focus ~ .focus-border-19 i:after {
+    height: 100%;
+    transition: 0.2s;
+}
+.textbox-19:focus ~ .focus-border-19 i:after {
+    transition-delay: 0.4s;
+} /* ...style for input text box of name ends */
+
+/* drop down menu of difficulty */
+.selection {
+    background-color: #6AE1FF;
+    color: black;
+}
+
+/* start game button */
+#startBtn {
+    background-color: #6AE1FF;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 2px 10px;
+}
+
+#homeBtn {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px 40px;
+}
+
+/* player scores and lives */
+.playerScore {
+    border-color: #6AE1FF;
+}
+
+/* titles for high score table */
+.highScoreTitle td {
+    background-color: #6AE1FF;
+}
+
+/* score of player in high score table */
+.highScoreTable td {
+    border-color: #6AE1FF;
+    background-color: whitesmoke;
+}
+
+/* high score table */
+#highScores {
+    height: 80%;
+}
+
+.gameTitle {
+    width: 90%;
+    border: 0;
+    font-family: "Arial Black";
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+/*center image*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.playerInput {
+    border: 0;
+}
